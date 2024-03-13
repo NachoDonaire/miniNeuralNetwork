@@ -16,12 +16,16 @@ class Neuron;
 class Input
 {
 	private:
-		enum InputType	id;
-		Neuron		*neurons;
-		//OutputNeuron	*out;
+		enum InputType		id;
+		Neuron			*neurons;
+		OutNeuron		*out;
  	public:
     		Input(enum InputType i, Neuron *n);
     		Input(int i);
+		void	setOut(OutNeuron *out);
+		void	setNeuron(Neuron *n);
+		OutNeuron	*getOut();
+		Neuron	*getNeurons();
     		~Input();
 };
 

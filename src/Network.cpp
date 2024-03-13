@@ -3,6 +3,7 @@
 
 Network::Network()
 {
+	srand(std::time(0));
 	unsigned i = 0;
 
 	while (i < CREATURES)

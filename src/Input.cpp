@@ -7,13 +7,33 @@ Input::Input(enum InputType i, Neuron *n)
 	int	y = 0;
 
 	id = i;
-	n = new Neuron[NEURONS];
 	while (y < NEURONS)
 	{
 		y++;
 
 	}
 
+}
+
+void	Input::setOut(OutNeuron *outi)
+{
+	out = outi;
+}
+
+void	Input::setNeuron(Neuron *n)
+{
+	neurons = n;
+}
+
+
+Neuron *Input::getNeurons()
+{
+	return this->neurons;
+}
+
+OutNeuron	*Input::getOut()
+{
+	return this->out;
 }
 
 Input::Input(int i)

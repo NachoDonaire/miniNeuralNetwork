@@ -9,10 +9,8 @@
 
 class Creature
 {
-	protected:
+	private:
 		std::vector<Input>		in;
-		Neuron				*neurons;
-		std::vector<OutNeuron>		out;
 		bool				live;
 		std::string			name;
 		float				pos[2];
@@ -23,6 +21,8 @@ class Creature
     		//Creature(std::string n, float p[2], float rgba[4]);
 		std::string	genName();
 		std::string	getName();
+		std::vector<Input> getIn();
+		void		display();
 		~Creature();
 };
 

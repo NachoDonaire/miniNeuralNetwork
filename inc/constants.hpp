@@ -3,9 +3,9 @@
 
 #define RADIUS 5
 #define NEURONS 3
-#define CREATURES 3
-#define INPUT_NEURONS 4
-#define OUTPUT_NEURONS 5
+#define CREATURES 2
+#define INPUT_NEURONS 3
+#define OUTPUT_NEURONS 4
 #define WIDTH 720
 #define HEIGHT 400
 
