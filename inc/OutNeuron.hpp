@@ -6,7 +6,9 @@ enum OutputActions {
 	MOVE_WEST,
 	MOVE_NORTH,
 	MOVE_SOUTH,
-	MOVE_RANDOM
+	MOVE_RANDOM, 
+	STAY,
+	MOVE_CENTER
 };
 
 class OutNeuron
@@ -16,10 +18,17 @@ class OutNeuron
 		float			weight;
 		float			bias;
 		float			activation;
+		float			sum;
  	public:
     		OutNeuron(int i);
     		OutNeuron();
+    		OutNeuron(OutNeuron *o);
+		void	setSum(float t);
+		void	setActivation(float t){activation = t;};
 		void	display();
+		enum OutputActions	getId() { return this->id; };
+		float	getBias() {return bias;};
+		float	getActivation() {return activation;};
     		~OutNeuron();
 };
 

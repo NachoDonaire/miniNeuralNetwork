@@ -18,6 +18,14 @@ OutNeuron::OutNeuron(int i)
 
 }
 
+OutNeuron::OutNeuron( OutNeuron *o)
+{
+	id = o->getId();
+	weight = randisimoFloat(0, 4);
+	bias = o->getBias();
+	activation = -2;
+	sum = 0;
+}
 
 void	OutNeuron::display()
 {
@@ -28,6 +36,10 @@ void	OutNeuron::display()
 	std::cout << "activation: " << activation << std::endl;
 }
 
+void	OutNeuron::setSum(float t)
+{
+	this->sum = t;
+}
 
 
 OutNeuron::~OutNeuron()
